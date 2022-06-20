@@ -25,7 +25,7 @@ server {
 
     server_name $domain;
 
-    rewrite ^ https://$domain$request_uri? permanent;
+    rewrite ^ https://$domain\$request_uri? permanent;
 }
 
 server {
@@ -44,7 +44,7 @@ server {
     error_log  /var/www/$domain/logs/error.log;
 
     location / {
-        try_files $uri $uri/ /index.php?$query_string;
+        try_files \$uri \$uri/ /index.php?\$query_string;
     }
 
     location ~ \.php$ {
@@ -96,4 +96,5 @@ select yn in "Yes" "No"; do
 done
 
 ok "Site Created for $domain"
+
 
