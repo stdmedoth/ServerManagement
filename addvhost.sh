@@ -65,7 +65,7 @@ cp $NGINX_AVAILABLE_VHOSTS/$domain.conf $NGINX_ENABLED_VHOSTS/$domain.conf
 mkdir -p $WEB_DIR/$domain/{public_html,logs}
 
 # Creating index.html file
-cat > $WEB_DIR/$domain/index.html <<EOF
+cat > $WEB_DIR/$domain/public_html/index.html <<EOF
 <!DOCTYPE html>
 <html lang="en">
 <head>
