@@ -35,7 +35,7 @@ server {
     ssl_certificate_key /etc/ssl/certs/cardban.com.br.key;
     ssl_stapling on;
 
-    root /var/www/$domain/public_html/public/;
+    root /var/www/$domain/public_html;
     index index.php index.html index.htm index.nginx-debian.html;
 
     server_name $domain;
